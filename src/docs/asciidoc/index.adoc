@@ -1,0 +1,251 @@
+= Horizon News API
+
+This is an example output for a service running at http://localhost:8080/
+
+== User
+
+=== Create New User / Register
+
+==== Success
+.request
+include::{snippets}/user-register-success/http-request.adoc[]
+
+.response
+include::{snippets}/user-register-success/http-response.adoc[]
+
+==== Failed
+.request
+include::{snippets}/user-register-fail/http-request.adoc[]
+
+.response
+include::{snippets}/user-register-fail/http-response.adoc[]
+
+
+=== Update User
+
+==== Success
+.request
+include::{snippets}/user-update-success/http-request.adoc[]
+
+.response
+include::{snippets}/user-update-success/http-response.adoc[]
+
+==== Failed
+.request
+include::{snippets}/user-update-fail/http-request.adoc[]
+
+.response
+include::{snippets}/user-update-fail/http-response.adoc[]
+
+
+=== Delete User
+
+==== Success
+.request
+include::{snippets}/user-delete-success/http-request.adoc[]
+
+.response
+include::{snippets}/user-delete-success/http-response.adoc[]
+
+==== Failed
+.request
+include::{snippets}/user-delete-fail/http-request.adoc[]
+
+.response
+include::{snippets}/user-delete-fail/http-response.adoc[]
+
+
+=== User Profile
+
+==== Success
+.request
+include::{snippets}/user-profile-success/http-request.adoc[]
+
+.response
+include::{snippets}/user-profile-success/http-response.adoc[]
+
+==== Failed
+.request
+include::{snippets}/user-profile-fail/http-request.adoc[]
+
+.response
+include::{snippets}/user-profile-fail/http-response.adoc[]
+
+
+
+== Authentication
+
+=== Login
+
+==== Success
+.request
+include::{snippets}/auth-login-success/http-request.adoc[]
+
+.response
+include::{snippets}/auth-login-fail/http-response.adoc[]
+
+==== Failed
+.request
+include::{snippets}/auth-login-fail/http-request.adoc[]
+
+.response
+include::{snippets}/auth-login-fail/http-response.adoc[]
+
+
+=== Logout
+
+==== Success
+.request
+include::{snippets}/auth-logout-success/http-request.adoc[]
+
+.response
+include::{snippets}/auth-logout-fail/http-response.adoc[]
+
+==== Failed
+.request
+include::{snippets}/auth-logout-fail/http-request.adoc[]
+
+.response
+include::{snippets}/auth-logout-fail/http-response.adoc[]
+
+
+
+== News
+
+=== Get News
+
+==== Success
+.request
+include::{snippets}/news-success/http-request.adoc[]
+
+.response
+include::{snippets}/news-success/http-response.adoc[]
+
+==== Failed
+.request
+include::{snippets}/news-fail/http-request.adoc[]
+
+.response
+include::{snippets}/news-fail/http-response.adoc[]
+
+=== Get News By Id
+
+==== Success
+.request
+include::{snippets}/news-id-success/http-request.adoc[]
+
+.response
+include::{snippets}/news-id-success/http-response.adoc[]
+
+==== Failed
+.request
+include::{snippets}/news-fail/http-request.adoc[]
+
+.response
+include::{snippets}/news-fail/http-response.adoc[]
+
+=== Get News By Category
+
+Category: (general, health, science, business, technology, sports, entertainment)
+
+==== Success
+.request
+include::{snippets}/news-category-success/http-request.adoc[]
+
+.response
+include::{snippets}/news-category-success/http-response.adoc[]
+
+==== Failed
+.request
+include::{snippets}/news-fail/http-request.adoc[]
+
+.response
+include::{snippets}/news-fail/http-response.adoc[]
+
+=== Search News
+
+==== Success
+.request
+include::{snippets}/search-news-success/http-request.adoc[]
+
+.response
+include::{snippets}/search-news-success/http-response.adoc[]
+
+==== Failed
+.request
+include::{snippets}/search-news-fail/http-request.adoc[]
+
+.response
+include::{snippets}/search-news-fail/http-response.adoc[]
+
+
+=== Bookmarks News
+
+Same failed for POST/DELETE/GET
+
+==== Failed
+.request
+include::{snippets}/news-add-bookmarks-fail/http-request.adoc[]
+
+.response
+include::{snippets}/news-add-bookmarks-fail/http-response.adoc[]
+
+=== Add Bookmark
+
+==== Success
+.request
+include::{snippets}/news-add-bookmarks-success/http-request.adoc[]
+
+.response
+include::{snippets}/news-add-bookmarks-success/http-response.adoc[]
+
+
+=== Delete Bookmark
+
+==== Success
+.request
+include::{snippets}/news-delete-bookmarks-success/http-request.adoc[]
+
+.response
+include::{snippets}/news-delete-bookmarks-success/http-response.adoc[]
+
+
+=== Get Bookmarks
+
+==== Success
+.request
+include::{snippets}/news-get-bookmarks-success/http-request.adoc[]
+
+.response
+include::{snippets}/news-get-bookmarks-success/http-response.adoc[]
+
+=== Is News Bookmarked
+
+==== Success
+.request
+include::{snippets}/news-get-is-bookmarked-success/http-request.adoc[]
+
+.response
+include::{snippets}/news-get-is-bookmarked-success/http-response.adoc[]
+
+
+=== Comment on News
+
+*Comment cannot be deleted*
+
+==== Success
+.request
+include::{snippets}/comment-news-success/http-request.adoc[]
+
+.response
+include::{snippets}/comment-news-success/http-response.adoc[]
+
+==== Failed
+.request
+include::{snippets}/comment-news-fail/http-request.adoc[]
+
+.response
+include::{snippets}/comment-news-fail/http-response.adoc[]
+
+
+
