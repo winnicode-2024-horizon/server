@@ -4,7 +4,7 @@ services:
     container_name: "horizon_db"
     restart: always
     ports:
-      - 3308:3306
+      - 3308:3308
     networks:
       - horizon_net
     command:
@@ -17,6 +17,7 @@ services:
     environment:
       MYSQL_DATABASE: horizon
       MYSQL_ROOT_PASSWORD: root
+      MYSQL_TCP_PORT: 3308
     volumes:
       - ./init.sql:/docker-entrypoint-initdb.d/init.sql
 
@@ -25,7 +26,7 @@ services:
     container_name: "horizon_db_replica"
     restart: always
     ports:
-      - 3309:3306
+      - 3309:3309
     networks:
       - horizon_net
     command:
@@ -38,6 +39,7 @@ services:
     environment:
       MYSQL_DATABASE: horizon
       MYSQL_ROOT_PASSWORD: root
+      MYSQL_TCP_PORT: 3309
     depends_on:
       - horizon_db
 
@@ -50,8 +52,6 @@ services:
       - 7024:7024
     networks:
       - horizon_net
-    environment:
-      - spring.datasource.url=jdbc:mysql://horizon-db:3306/horizon
     depends_on:
       - horizon_db
     restart: always
